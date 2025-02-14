@@ -1,0 +1,202 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Love Letter 💌</title>
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Romantic Play Button */
+        .music-button {
+            background-color: #e91e63;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0px 4px 10px rgba(233, 30, 99, 0.4);
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .music-button:hover {
+            background-color: #d81b60;
+            box-shadow: 0px 6px 15px rgba(233, 30, 99, 0.6);
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        .heart-icon {
+            font-size: 24px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="music/romatic-music.mpeg" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="love-letter-container">
+        <img src="images/heart.png" class="heart-decoration heart1">
+        <img src="images/heart.png" class="heart-decoration heart2">
+        <img src="images/heart.png" class="heart-decoration heart3">
+        
+        <h1 style="font-family: 'Dancing Script', cursive; color: #b71c1c;">My Love 💖</h1>
+        
+        <p class="love-letter-text">
+            My Dearest Patie,<br>
+
+I miss you more than words can say, and every day apart feels harder than the last. The distance between us has been tough, and though we’ve had our arguments, I believe each one only shows how deeply we care for each other. Our love has always been worth fighting for.
+
+Even in the tough times, I’m grateful for the effort we both put into making this work. I admire your strength, patience, and the love you give so freely, even when we’re far apart. I know we’ll get through this, and one day, we won’t have to count the days until we’re together again.
+
+I can’t wait to be close to you again, to hold you and feel your presence without distance between us. Until then, know that I love you with all my heart and can’t wait for the future we’ll share.
+
+<br>Forever yours,<br>
+Umar
+        </p>
+    </div>
+
+    <!-- Play/Pause Button -->
+    <button class="music-button" onclick="toggleMusic()">
+        <span id="music-icon" class="heart-icon">❤️</span> Play Music
+    </button>
+
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("background-music");
+            var icon = document.getElementById("music-icon");
+            if (music.paused) {
+                music.play();
+                icon.innerHTML = "💖"; // Change to a glowing heart
+            } else {
+                music.pause();
+                icon.innerHTML = "❤️"; // Change back to a normal heart
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">My Patie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="love-letter.html">Love Letter</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="couple-goals.html">Prayer Petition & Goals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">ALBUM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loveTips.html">Love Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="truthordare.html">Truth Or Dare</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="container mt-4">
+            
+    </div>
+
+</body>
+
+<style>
+/* Custom Navbar Styles */
+.navbar-custom {
+    background-color: #333; /* Dark background */
+    color: white;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-color: #fff; /* Ensures the toggler icon is visible */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ff4081; /* Change to a highlight color on hover */
+}
+
+/* Adjusting navbar brand color */
+.navbar-custom .navbar-brand {
+    color: white;
+}
+
+/* Body padding to adjust for fixed navbar */
+body {
+    padding-top: 60px; /* Push content below the fixed navbar */
+}
+
+/* Mobile menu tweaks */
+@media (max-width: 767px) {
+    .navbar-custom .navbar-collapse {
+        background-color: #333333; /* Ensure the navbar background stays dark when collapsed */
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        color: #fff; /* Ensure links are visible when menu is toggled */
+    }
+
+    .navbar-custom .navbar-nav .nav-link:hover {
+        color: #ff4081; /* Highlight color for links on hover */
+    }
+}
+</style>
+</html>
