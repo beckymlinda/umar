@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "scripts": {
-  "start": "node server.js"
-}
-,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beckymlinda/umar.git"
@@ -21,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/beckymlinda/umar/issues"
   },
-  "homepage": "https://github.com/beckymlinda/umar#readme"
+  "homepage": "https://github.com/beckymlinda/umar#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
